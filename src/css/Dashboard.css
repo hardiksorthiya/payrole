@@ -1,0 +1,103 @@
+/* ============================================
+   Dashboard Styles
+   ============================================ */
+
+.sorath-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sorath-bg-secondary);
+  transition: background-color 0.3s ease;
+}
+
+.sorath-dashboard-content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.sorath-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  transition: margin-left 0.1s ease, width 0.1s ease;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.sorath-main-content .sorath-main-inner {
+  padding: 2rem;
+}
+
+.sorath-main-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sorath-page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--sorath-text-primary);
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.sorath-page-subtitle {
+  color: var(--sorath-text-tertiary);
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.sorath-content-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.sorath-card {
+  background: var(--sorath-card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--sorath-card-shadow);
+  transition: all 0.3s ease;
+}
+
+.sorath-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sorath-card-shadow-hover);
+}
+
+.sorath-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--sorath-text-primary);
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.sorath-card p {
+  color: var(--sorath-text-tertiary);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* Main content margin is handled inline via React state */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sorath-main-content .sorath-main-inner {
+    padding: 1rem;
+  }
+
+  .sorath-content-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .sorath-page-title {
+    font-size: 1.5rem;
+  }
+}
+

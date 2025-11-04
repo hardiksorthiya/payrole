@@ -1,0 +1,14 @@
+/* ============================================
+   Theme Toggle Component Styles
+   ============================================ */
+
+.sorath-theme-toggle {
+  /* Styles are inherited from sorath-header-icon-btn */
+}
+
+.sorath-theme-toggle i {
+  font-size: 1.25rem;
+}
+
+
+

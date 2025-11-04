@@ -1,0 +1,255 @@
+/* ============================================
+   Login Page Styles - Using sorath- prefix
+   ============================================ */
+
+.sorath-login-page {
+  min-height: 100vh;
+  background: var(--sorath-bg-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transition: background 0.3s ease;
+}
+
+.sorath-login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.sorath-login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sorath-logo-container {
+  text-align: center;
+  color: white;
+}
+
+.sorath-logo {
+  width: 70px;
+  height: 70px;
+  background: var(--sorath-logo-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--sorath-logo-border);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.sorath-logo i {
+  font-size: 2rem;
+  color: white;
+}
+
+.sorath-logo-text {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.sorath-login-card {
+  border: 1px solid var(--sorath-glass-border);
+  border-radius: 20px;
+  box-shadow: var(--sorath-glass-shadow);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glass effect overlay */
+.sorath-login-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--sorath-glass-bg-light);
+  z-index: -1;
+  border-radius: 20px;
+}
+
+/* Ensure card body content is above glass effect */
+.sorath-login-card .card-body {
+  position: relative;
+  z-index: 1;
+  --tw-shadow: 0 20px 60px -20px rgba(139, 92, 246, .45);
+  --tw-shadow-colored: 0 20px 60px -20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.sorath-login-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sorath-login-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sorath-form-label {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sorath-form-control {
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.sorath-form-control:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  outline: none;
+}
+
+.sorath-form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sorath-forgot-password-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sorath-forgot-password-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.sorath-signup-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.sorath-signup-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sorath-signup-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+}
+
+.sorath-btn-primary {
+  background: var(--sorath-btn-primary-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.sorath-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px var(--sorath-btn-primary-hover-shadow);
+  background: var(--sorath-primary-gradient-reverse);
+}
+
+.sorath-btn-primary:disabled {
+  opacity: 0.7;
+  transform: none;
+}
+
+.sorath-btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem var(--sorath-input-focus-shadow);
+}
+
+/* Custom checkbox styles */
+.sorath-login-card .form-check-label {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sorath-form-check-input {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.sorath-form-check-input:checked {
+  background-color: var(--sorath-primary-color);
+  border-color: var(--sorath-primary-color);
+}
+
+.sorath-form-check-input:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.2);
+}
+
+/* Alert Styles */
+.sorath-alert-danger {
+  background-color: var(--sorath-alert-danger-bg);
+  border-color: var(--sorath-alert-danger-border);
+  color: var(--sorath-alert-danger-text);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sorath-login-page {
+    padding: 1rem;
+  }
+
+  .sorath-login-card {
+    box-shadow: var(--sorath-card-shadow-hover);
+  }
+
+  .sorath-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sorath-logo i {
+    font-size: 2rem;
+  }
+
+  .sorath-logo-text {
+    font-size: 1.5rem;
+  }
+
+  .sorath-login-wrapper {
+    gap: 1.5rem;
+  }
+}
+

@@ -1,0 +1,196 @@
+/* ============================================
+   Google Fonts Import - Roboto
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+/* ============================================
+   CSS Variables for Dark/Light Mode Support
+   ============================================ */
+
+:root {
+  /* Font Family */
+  --sorath-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  
+  /* Primary Colors */
+  --sorath-primary-color: #06155e;
+  --sorath-primary-color-dark: #764ba2;
+  --sorath-primary-gradient: linear-gradient(135deg, #06155e 0%, #764ba2 100%);
+  --sorath-primary-gradient-reverse: linear-gradient(135deg, #764ba2 0%, #06155e 100%);
+  
+  /* Light Mode Colors */
+  --sorath-bg-primary: #ffffff;
+  --sorath-bg-secondary: #f8f9fa;
+  --sorath-bg-tertiary: #e9ecef;
+  
+  --sorath-text-primary: #212529;
+  --sorath-text-secondary: #495057;
+  --sorath-text-tertiary: #6c757d;
+  --sorath-text-muted: #adb5bd;
+  
+  --sorath-border-color: #dee2e6;
+  --sorath-border-color-light: #e9ecef;
+  
+  /* Card & Shadow */
+  --sorath-card-bg: #ffffff;
+  --sorath-card-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  --sorath-card-shadow-hover: 0 5px 20px rgba(0, 0, 0, 0.15);
+  
+  /* Glass Morphism */
+  --sorath-glass-bg: rgba(255, 255, 255, 0.25);
+  --sorath-glass-bg-light: rgba(255, 255, 255, 0.15);
+  --sorath-glass-border: rgba(255, 255, 255, 0.18);
+  --sorath-glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --sorath-glass-backdrop: blur(10px);
+  
+  /* Input Fields */
+  --sorath-input-bg: #ffffff;
+  --sorath-input-border: #dee2e6;
+  --sorath-input-focus-border: #06155e;
+  --sorath-input-focus-shadow: rgba(102, 126, 234, 0.25);
+  
+  /* Button */
+  --sorath-btn-primary-bg: linear-gradient(135deg, #06155e 0%, #764ba2 100%);
+  --sorath-btn-primary-hover-shadow: rgba(102, 126, 234, 0.4);
+  
+  /* Alert */
+  --sorath-alert-danger-bg: #f8d7da;
+  --sorath-alert-danger-text: #721c24;
+  --sorath-alert-danger-border: #f5c6cb;
+  
+  /* Link */
+  --sorath-link-color: #06155e;
+  --sorath-link-hover-color: #764ba2;
+  
+  /* Logo Background (for login page) */
+  --sorath-logo-bg: rgba(255, 255, 255, 0.2);
+  --sorath-logo-border: rgba(255, 255, 255, 0.3);
+  
+  /* Background Gradient (for login page) */
+  --sorath-bg-gradient: linear-gradient(135deg, #06155e 0%, #764ba2 100%);
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  /* Primary Colors remain the same */
+  --sorath-primary-color: #06155e;
+  --sorath-primary-color-dark: #764ba2;
+  --sorath-primary-gradient: linear-gradient(135deg, #06155e 0%, #764ba2 100%);
+  --sorath-primary-gradient-reverse: linear-gradient(135deg, #764ba2 0%, #06155e 100%);
+  
+  /* Dark Mode Colors */
+  --sorath-bg-primary: #1a1a1a;
+  --sorath-bg-secondary: #242424;
+  --sorath-bg-tertiary: #2d2d2d;
+  
+  --sorath-text-primary: #ffffff;
+  --sorath-text-secondary: #e0e0e0;
+  --sorath-text-tertiary: #b0b0b0;
+  --sorath-text-muted: #808080;
+  
+  --sorath-border-color: #404040;
+  --sorath-border-color-light: #333333;
+  
+  /* Card & Shadow */
+  --sorath-card-bg: #2d2d2d;
+  --sorath-card-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --sorath-card-shadow-hover: 0 5px 20px rgba(0, 0, 0, 0.3);
+  
+  /* Glass Morphism - Dark Mode */
+  --sorath-glass-bg: rgba(45, 45, 45, 0.3);
+  --sorath-glass-bg-light: rgba(45, 45, 45, 0.2);
+  --sorath-glass-border: rgba(255, 255, 255, 0.1);
+  --sorath-glass-shadow: 0 8px 32px 0 rgb(0 0 0 / 21%);
+  --sorath-glass-backdrop: blur(10px);
+  
+  /* Input Fields */
+  --sorath-input-bg: #242424;
+  --sorath-input-border: #404040;
+  --sorath-input-focus-border: #06155e;
+  --sorath-input-focus-shadow: rgba(102, 126, 234, 0.3);
+  
+  /* Button (same gradient, but can be adjusted) */
+  --sorath-btn-primary-bg: linear-gradient(135deg, #06155e 0%, #764ba2 100%);
+  --sorath-btn-primary-hover-shadow: rgba(102, 126, 234, 0.5);
+  
+  /* Alert */
+  --sorath-alert-danger-bg: #4a1f1f;
+  --sorath-alert-danger-text: #ff6b6b;
+  --sorath-alert-danger-border: #5a2f2f;
+  
+  /* Link */
+  --sorath-link-color: #7c8ef5;
+  --sorath-link-hover-color: #8d9ef6;
+  
+  /* Logo Background */
+  --sorath-logo-bg: rgba(255, 255, 255, 0.15);
+  --sorath-logo-border: rgba(255, 255, 255, 0.25);
+  
+  /* Background Gradient (can be darker for dark mode) */
+  --sorath-bg-gradient: linear-gradient(135deg, #06155e 0%, #5a3f7a 100%);
+}
+
+/* ============================================
+   Global Styles
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--sorath-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--sorath-bg-secondary);
+  color: var(--sorath-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ============================================
+   Utility Classes - Using sorath- prefix
+   ============================================ */
+
+.sorath-text-primary {
+  color: var(--sorath-text-primary);
+}
+
+.sorath-text-secondary {
+  color: var(--sorath-text-secondary);
+}
+
+.sorath-text-tertiary {
+  color: var(--sorath-text-tertiary);
+}
+
+.sorath-text-muted {
+  color: var(--sorath-text-muted);
+}
+
+.sorath-bg-primary {
+  background-color: var(--sorath-bg-primary);
+}
+
+.sorath-bg-secondary {
+  background-color: var(--sorath-bg-secondary);
+}
+
+.sorath-bg-tertiary {
+  background-color: var(--sorath-bg-tertiary);
+}
+
+.sorath-border-primary {
+  border-color: var(--sorath-border-color);
+}
+
+.sorath-border-light {
+  border-color: var(--sorath-border-color-light);
+}
+
