@@ -1,0 +1,89 @@
+/* ============================================
+   Client Form Page Styles
+   ============================================ */
+
+.sorath-client-form-page {
+  /* Padding handled by sorath-main-inner */
+}
+
+.sorath-client-form-card {
+  background: var(--sorath-card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--sorath-card-shadow);
+  transition: all 0.3s ease;
+}
+
+/* Ensure labels are visible in light mode (and adapt in dark via variables) */
+.sorath-client-form-card .sorath-form-label {
+  color: var(--sorath-text-primary);
+}
+
+/* Form controls (input, select, textarea) - ensure text color is visible in both modes */
+.sorath-client-form-card .sorath-form-control,
+.sorath-client-form-card .form-control,
+.sorath-client-form-card .form-select {
+  background-color: var(--sorath-input-bg);
+  border-color: var(--sorath-input-border);
+  color: var(--sorath-text-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.sorath-client-form-card .sorath-form-control:focus,
+.sorath-client-form-card .form-control:focus,
+.sorath-client-form-card .form-select:focus {
+  background-color: var(--sorath-input-bg);
+  border-color: var(--sorath-input-focus-border);
+  color: var(--sorath-text-primary);
+  box-shadow: 0 0 0 0.2rem var(--sorath-input-focus-shadow);
+}
+
+.sorath-client-form-card .sorath-form-control::placeholder,
+.sorath-client-form-card .form-control::placeholder {
+  color: var(--sorath-text-tertiary);
+  opacity: 0.7;
+}
+
+/* Select dropdown options */
+.sorath-client-form-card .form-select option {
+  background-color: var(--sorath-input-bg);
+  color: var(--sorath-text-primary);
+}
+
+.sorath-form-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--sorath-text-primary);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.sorath-form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.sorath-form-actions .sorath-btn-secondary,
+.sorath-form-actions .sorath-btn-primary {
+  min-width: 120px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sorath-client-form-card {
+    padding: 1.5rem;
+  }
+
+  .sorath-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .sorath-form-actions .sorath-btn-secondary,
+  .sorath-form-actions .sorath-btn-primary {
+    width: 100%;
+  }
+}
+

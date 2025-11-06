@@ -1,0 +1,144 @@
+/* ============================================
+   Client Type Page Styles
+   ============================================ */
+
+.sorath-client-type-page {
+  /* Padding handled by sorath-main-inner */
+}
+
+.sorath-client-type-form-card,
+.sorath-client-type-list-card {
+  background: var(--sorath-card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--sorath-card-shadow);
+  transition: all 0.3s ease;
+  height: fit-content;
+}
+
+.sorath-form-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--sorath-text-primary);
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Ensure labels are visible */
+.sorath-client-type-form-card .sorath-form-label {
+  color: var(--sorath-text-primary);
+}
+
+/* Form controls */
+.sorath-client-type-form-card .sorath-form-control,
+.sorath-client-type-form-card .form-control {
+  background-color: var(--sorath-input-bg);
+  border-color: var(--sorath-input-border);
+  color: var(--sorath-text-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.sorath-client-type-form-card .sorath-form-control:focus,
+.sorath-client-type-form-card .form-control:focus {
+  background-color: var(--sorath-input-bg);
+  border-color: var(--sorath-input-focus-border);
+  color: var(--sorath-text-primary);
+  box-shadow: 0 0 0 0.2rem var(--sorath-input-focus-shadow);
+}
+
+.sorath-form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.sorath-form-actions .sorath-btn-secondary,
+.sorath-form-actions .sorath-btn-primary {
+  min-width: 120px;
+}
+
+.sorath-client-type-table {
+  margin: 0;
+  color: var(--sorath-text-primary);
+}
+
+.sorath-client-type-table thead {
+  background-color: var(--sorath-bg-tertiary);
+  transition: background-color 0.3s ease;
+}
+
+.sorath-client-type-table thead th {
+  border-bottom: 2px solid var(--sorath-border-color);
+  padding: 0.75rem;
+  font-weight: 600;
+  color: var(--sorath-text-primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.sorath-client-type-table tbody td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--sorath-border-color);
+  vertical-align: middle;
+  transition: border-color 0.3s ease;
+}
+
+.sorath-client-type-table tbody tr:hover {
+  background-color: var(--sorath-bg-tertiary);
+  transition: background-color 0.2s ease;
+}
+
+.sorath-empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.sorath-empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--sorath-text-tertiary);
+}
+
+.sorath-empty-content i {
+  font-size: 2.5rem;
+  opacity: 0.5;
+}
+
+.sorath-empty-content p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .sorath-client-type-form-card,
+  .sorath-client-type-list-card {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sorath-client-type-form-card,
+  .sorath-client-type-list-card {
+    padding: 1.5rem;
+  }
+
+  .sorath-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .sorath-form-actions .sorath-btn-secondary,
+  .sorath-form-actions .sorath-btn-primary {
+    width: 100%;
+  }
+
+  .sorath-client-type-table {
+    font-size: 0.875rem;
+  }
+}
+

@@ -141,6 +141,59 @@
   overflow: hidden;
 }
 
+/* Parent menu item with chevron */
+.sorath-menu-item-parent {
+  cursor: pointer;
+}
+
+.sorath-menu-chevron {
+  margin-left: auto;
+  font-size: 0.875rem;
+  transition: transform 0.2s ease;
+}
+
+/* Submenu */
+.sorath-submenu {
+  background-color: var(--sorath-bg-primary);
+  border-left: 3px solid var(--sorath-primary-color);
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.sorath-submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  color: var(--sorath-text-secondary);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 6px;
+  margin: 0.25rem 0;
+}
+
+.sorath-submenu-item:hover {
+  background-color: var(--sorath-bg-tertiary);
+  color: var(--sorath-primary-color);
+}
+
+.sorath-submenu-item-active {
+  background-color: var(--sorath-bg-tertiary);
+  color: var(--sorath-primary-color);
+}
+
+.sorath-submenu-item i {
+  font-size: 1rem;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 /* Scrollbar */
 .sorath-sidebar::-webkit-scrollbar {
   width: 6px;

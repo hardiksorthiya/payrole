@@ -1,9 +1,19 @@
+import { useState, useEffect } from 'react'
 import { Nav } from 'react-bootstrap'
 import { Link, useLocation } from 'react-router-dom'
 import '../css/Sidebar.css'
 
 function Sidebar({ isOpen }) {
   const location = useLocation()
+  const isMasterRoute = location.pathname.startsWith('/master')
+  const [masterExpanded, setMasterExpanded] = useState(isMasterRoute)
+
+  // Update expanded state when route changes
+  useEffect(() => {
+    if (isMasterRoute) {
+      setMasterExpanded(true)
+    }
+  }, [isMasterRoute])
 
   const menuItems = [
     {
@@ -12,8 +22,13 @@ function Sidebar({ isOpen }) {
       label: 'Dashboard',
     },
     {
-      path: '/employees',
+      path: '/clients',
       icon: 'bi-people',
+      label: 'Clients',
+    },
+    {
+      path: '/employees',
+      icon: 'bi-person-badge',
       label: 'Employees',
     },
     {
@@ -37,6 +52,18 @@ function Sidebar({ isOpen }) {
       label: 'Settings',
     },
   ]
+
+  const masterSubItems = [
+    {
+      path: '/master/client-type',
+      icon: 'bi-tags',
+      label: 'Client Type',
+    },
+  ]
+
+  const toggleMaster = () => {
+    setMasterExpanded(!masterExpanded)
+  }
 
   return (
     <aside className={`sorath-sidebar ${isOpen ? 'sorath-sidebar-open' : 'sorath-sidebar-closed'}`}>
@@ -71,6 +98,37 @@ function Sidebar({ isOpen }) {
               </Nav.Item>
             )
           })}
+          
+          {/* Master Menu */}
+          <Nav.Item>
+            <div className="sorath-menu-item sorath-menu-item-parent" onClick={toggleMaster}>
+              <i className="bi bi-box-seam"></i>
+              {isOpen && (
+                <>
+                  <span className="sorath-menu-label">Master</span>
+                  <i className={`bi ${masterExpanded ? 'bi-chevron-up' : 'bi-chevron-down'} sorath-menu-chevron`}></i>
+                </>
+              )}
+            </div>
+            {masterExpanded && isOpen && (
+              <div className="sorath-submenu">
+                {masterSubItems.map((item) => {
+                  const isActive = location.pathname === item.path
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className={`sorath-submenu-item ${isActive ? 'sorath-submenu-item-active' : ''}`}
+                      title={item.label}
+                    >
+                      <i className={`bi ${item.icon}`}></i>
+                      <span className="sorath-menu-label">{item.label}</span>
+                    </Link>
+                  )
+                })}
+              </div>
+            )}
+          </Nav.Item>
         </Nav>
       </nav>
     </aside>

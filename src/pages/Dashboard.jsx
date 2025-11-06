@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import "../css/Dashboard.css";
@@ -70,28 +71,38 @@ function Dashboard() {
           }}
         >
           <Header toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
-          <div className="sorath-main-inner">
-            <h1 className="sorath-page-title">Dashboard</h1>
-            <p className="sorath-page-subtitle">
-              Welcome to Payroll System Dashboard
-            </p>
-
+          <Container fluid className="sorath-main-inner">
+            <Row>
+              <Col>
+                <h1 className="sorath-page-title">Dashboard</h1>
+                <p className="sorath-page-subtitle">
+                  Welcome to Payroll System Dashboard
+                </p>
+              </Col>
+            </Row>
+            
             {/* Dummy content for now */}
-            <div className="sorath-content-section">
-              <div className="sorath-card">
-                <h3>Employee Management</h3>
-                <p>Manage your employees and their information</p>
-              </div>
-              <div className="sorath-card">
-                <h3>Payroll Processing</h3>
-                <p>Process and manage payroll for your employees</p>
-              </div>
-              <div className="sorath-card">
-                <h3>Reports & Analytics</h3>
-                <p>View reports and analytics for your payroll data</p>
-              </div>
-            </div>
-          </div>
+            <Row className="sorath-content-section">
+              <Col xs={12} md={6} lg={4} className="mb-3">
+                <div className="sorath-card">
+                  <h3>Employee Management</h3>
+                  <p>Manage your employees and their information</p>
+                </div>
+              </Col>
+              <Col xs={12} md={6} lg={4} className="mb-3">
+                <div className="sorath-card">
+                  <h3>Payroll Processing</h3>
+                  <p>Process and manage payroll for your employees</p>
+                </div>
+              </Col>
+              <Col xs={12} md={6} lg={4} className="mb-3">
+                <div className="sorath-card">
+                  <h3>Reports & Analytics</h3>
+                  <p>View reports and analytics for your payroll data</p>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </main>
       </div>
     </div>

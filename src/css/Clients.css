@@ -1,0 +1,273 @@
+/* ============================================
+   Clients Page Styles
+   ============================================ */
+
+.sorath-clients-page {
+  /* Padding handled by sorath-main-inner */
+}
+
+/* Ensure any form labels on this page use theme text color */
+.sorath-clients-page .sorath-form-label {
+  color: var(--sorath-text-primary);
+}
+
+.sorath-page-header {
+  /* Bootstrap Row/Col handles layout */
+}
+
+.sorath-page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--sorath-text-primary);
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.sorath-page-subtitle {
+  color: var(--sorath-text-tertiary);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.sorath-clients-table-container {
+  background: var(--sorath-card-bg);
+  border-radius: 12px;
+  box-shadow: var(--sorath-card-shadow);
+  overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sorath-clients-table {
+  margin: 0;
+  color: var(--sorath-text-primary);
+}
+
+.sorath-clients-table thead {
+  background-color: var(--sorath-bg-tertiary);
+  transition: background-color 0.3s ease;
+}
+
+.sorath-clients-table thead th {
+  border-bottom: 2px solid var(--sorath-border-color);
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--sorath-text-primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.sorath-clients-table tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--sorath-border-color);
+  vertical-align: middle;
+  transition: border-color 0.3s ease;
+}
+
+.sorath-clients-table tbody tr:hover {
+  background-color: var(--sorath-bg-tertiary);
+  transition: background-color 0.2s ease;
+}
+
+.sorath-client-type-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--sorath-primary-gradient);
+  color: white;
+}
+
+.sorath-action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sorath-action-btn {
+  background: none;
+  border: none;
+  color: var(--sorath-text-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.sorath-action-btn:hover {
+  background-color: var(--sorath-bg-tertiary);
+  color: var(--sorath-primary-color);
+}
+
+.sorath-action-btn-danger:hover {
+  background-color: var(--sorath-alert-danger-bg);
+  color: var(--sorath-alert-danger-text);
+}
+
+.sorath-empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.sorath-empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--sorath-text-tertiary);
+}
+
+.sorath-empty-content i {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+.sorath-empty-content p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Modal Styles */
+.sorath-create-client-modal .modal-content {
+  background: var(--sorath-card-bg);
+  border: 1px solid var(--sorath-border-color);
+  border-radius: 12px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.sorath-create-client-modal .modal-header {
+  border-bottom: 1px solid var(--sorath-border-color);
+  padding: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.sorath-create-client-modal .modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--sorath-text-primary);
+  transition: color 0.3s ease;
+}
+
+.sorath-create-client-modal .modal-body {
+  padding: 1.5rem;
+}
+
+.sorath-create-client-modal .btn-close {
+  filter: var(--sorath-text-primary);
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.sorath-create-client-modal .btn-close:hover {
+  opacity: 1;
+}
+
+.sorath-required {
+  color: var(--sorath-alert-danger-text);
+  margin-left: 2px;
+}
+
+.sorath-invalid-feedback {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--sorath-alert-danger-text);
+}
+
+/* Form controls - ensure text color is visible in both modes */
+.sorath-clients-page .sorath-form-control,
+.sorath-clients-page .form-control,
+.sorath-clients-page .form-select {
+  background-color: var(--sorath-input-bg);
+  border-color: var(--sorath-input-border);
+  color: var(--sorath-text-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.sorath-clients-page .sorath-form-control:focus,
+.sorath-clients-page .form-control:focus,
+.sorath-clients-page .form-select:focus {
+  background-color: var(--sorath-input-bg);
+  border-color: var(--sorath-input-focus-border);
+  color: var(--sorath-text-primary);
+  box-shadow: 0 0 0 0.2rem var(--sorath-input-focus-shadow);
+}
+
+.sorath-clients-page .sorath-form-control::placeholder,
+.sorath-clients-page .form-control::placeholder {
+  color: var(--sorath-text-tertiary);
+  opacity: 0.7;
+}
+
+/* Select dropdown options */
+.sorath-clients-page .form-select option {
+  background-color: var(--sorath-input-bg);
+  color: var(--sorath-text-primary);
+}
+
+.sorath-form-control.is-invalid {
+  border-color: var(--sorath-alert-danger-border);
+}
+
+.sorath-form-control.is-invalid:focus {
+  border-color: var(--sorath-alert-danger-border);
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.sorath-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--sorath-border-color);
+}
+
+.sorath-btn-secondary {
+  background: var(--sorath-bg-tertiary);
+  border: 1px solid var(--sorath-border-color);
+  color: var(--sorath-text-primary);
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.sorath-btn-secondary:hover {
+  background: var(--sorath-border-color);
+  border-color: var(--sorath-border-color);
+  color: var(--sorath-text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sorath-clients-page {
+    padding: 1rem;
+  }
+
+  .sorath-page-header {
+    flex-direction: column;
+  }
+
+  .sorath-clients-table-container {
+    overflow-x: auto;
+  }
+
+  .sorath-clients-table {
+    min-width: 800px;
+  }
+
+  .sorath-page-title {
+    font-size: 1.5rem;
+  }
+}
+
