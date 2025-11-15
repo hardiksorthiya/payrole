@@ -27,6 +27,11 @@ function Sidebar({ isOpen }) {
       label: 'Clients',
     },
     {
+      path: '/companies',
+      icon: 'bi-building',
+      label: 'Companies',
+    },
+    {
       path: '/employees',
       icon: 'bi-person-badge',
       label: 'Employees',
@@ -58,6 +63,21 @@ function Sidebar({ isOpen }) {
       path: '/master/client-type',
       icon: 'bi-tags',
       label: 'Client Type',
+    },
+    {
+      path: '/master/department',
+      icon: 'bi-building',
+      label: 'Department',
+    },
+    {
+      path: '/master/position',
+      icon: 'bi-briefcase',
+      label: 'Position',
+    },
+    {
+      path: '/master/payroll-type',
+      icon: 'bi-cash-stack',
+      label: 'Payroll Type',
     },
   ]
 

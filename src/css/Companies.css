@@ -1,0 +1,137 @@
+/* ============================================
+   Companies Page Styles
+   ============================================ */
+
+.sorath-companies-page {
+  /* Padding handled by sorath-main-inner */
+}
+
+.sorath-company-form-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--sorath-card-shadow);
+  overflow: hidden;
+}
+
+.sorath-company-form-card .card-header {
+  background: var(--sorath-bg-tertiary);
+  border: none;
+  color: var(--sorath-text-primary);
+  padding: 1.25rem 1.5rem;
+}
+
+.sorath-company-form-card .card-body {
+  padding: 1.5rem;
+}
+
+.sorath-company-form-card .form-label {
+  font-weight: 500;
+  color: var(--sorath-text-secondary);
+}
+
+.sorath-company-form-card .form-control {
+  border-radius: 10px;
+  border-color: var(--sorath-border-color);
+  padding: 0.65rem 0.85rem;
+}
+
+.sorath-companies-table-container {
+  background: var(--sorath-card-bg);
+  border-radius: 12px;
+  box-shadow: var(--sorath-card-shadow);
+  overflow: hidden;
+}
+
+.sorath-table-header-meta {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 1.5rem 0 1.5rem;
+  color: var(--sorath-text-tertiary);
+  font-size: 0.9rem;
+}
+
+.sorath-companies-table {
+  margin: 0;
+  color: var(--sorath-text-primary);
+}
+
+.sorath-companies-table thead {
+  background-color: var(--sorath-bg-tertiary);
+}
+
+.sorath-companies-table thead th {
+  border-bottom: 2px solid var(--sorath-border-color);
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--sorath-text-primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sorath-companies-table tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--sorath-border-color);
+  vertical-align: middle;
+}
+
+.sorath-companies-table tbody tr:hover {
+  background-color: var(--sorath-bg-tertiary);
+}
+
+.sorath-company-industry-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  background: var(--sorath-bg-tertiary);
+  color: var(--sorath-text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.sorath-company-website a {
+  color: var(--sorath-primary-color);
+  text-decoration: none;
+}
+
+.sorath-company-website a:hover {
+  text-decoration: underline;
+}
+
+.sorath-companies-empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--sorath-card-bg);
+  border-radius: 12px;
+  box-shadow: var(--sorath-card-shadow);
+}
+
+.sorath-empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--sorath-text-tertiary);
+}
+
+.sorath-empty-content i {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+.sorath-empty-content p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .sorath-companies-page {
+    padding: 1rem;
+  }
+
+  .sorath-companies-table {
+    min-width: 800px;
+  }
+}
+
+
